@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+        thead, tfoot{
+            background-color: gray;
+            color: white;
+        }
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: lightslategray;
+        }
+        /* ODD = IMPAR
+        EVEN = PAR nth-child(odd/even[2n-1 / 2n]) */
+        tbody > tr:nth-child(2n) {
+            background-color: lightslategray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+            ANATOMIA PARA TABELAS GRANDES
+            TABLE
+            CAPTION - LEGENDA
+                THEAD
+                    tr,td,th
+                TBODY
+                    tr,td,th
+                TFOOT
+                    tr,td,th
+    -->
+    <table>
+        <caption> Tabela de Riscos</caption>
+        <thead>
+            <tr>
+                <th scope="col">Jacqueline Amor</th>
+                <th scope="col">Condição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Jacqueline normal</td>
+                <td>Normal</td>
+            </tr>
+            <tr>
+                <td>Jacqueline com fome</td>
+                <td>Alto perigo</td>
+            </tr>
+            <tr>
+                <td>Jacqueline com pré treino</td>
+                <td>Ações inesperadas e rapidas</td>
+            </tr>
+            <tr>
+                <td>Jacqueline TPM</td>
+                <td>Não chegue perto, risco nivel vida</td>
+            </tr>
+            <tr>
+                <td>Jacqueline depois de feijoada</td>
+                <td>RISCO BIOLOGICO</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Riscos / Perigo</th>
+                <td>4</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
